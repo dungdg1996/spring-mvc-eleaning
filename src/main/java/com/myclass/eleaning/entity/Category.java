@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Role {
+public class Category {
     private Integer id;
-    private String name;
-    private String description;
+    private String title;
+    private String icon;
 }

@@ -1,5 +1,4 @@
 package com.myclass.eleaning.entity;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -7,8 +6,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Role {
+public class Target {
     private Integer id;
-    private String name;
-    private String description;
+    private int courseId;
 }

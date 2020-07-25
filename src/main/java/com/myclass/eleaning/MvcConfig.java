@@ -1,5 +1,6 @@
 package com.myclass.eleaning;
 
+import nz.net.ultraq.thymeleaf.LayoutDialect;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -8,6 +9,7 @@ import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.thymeleaf.dialect.IDialect;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
@@ -28,7 +30,14 @@ public class MvcConfig implements WebMvcConfigurer {
 
         springTemplateEngine.setTemplateResolver(templateResolver());
 
+        springTemplateEngine.addDialect(layoutDialect());
+
         return springTemplateEngine;
+    }
+
+    @Bean
+    public IDialect layoutDialect() {
+        return new LayoutDialect();
     }
 
     @Bean

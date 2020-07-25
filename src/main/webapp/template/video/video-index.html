@@ -15,15 +15,15 @@
                         <li class="breadcrumb-item"><a href="/admin"> <i
                                 class="feather icon-home"></i> Trang chủ
                         </a></li>
-                        <li class="breadcrumb-item"><a href="#!">Danh sách tài khoản</a></li>
+                        <li class="breadcrumb-item"><a href="#!">Danh sách video</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-sm-12">
                 <div class="card px-3">
                     <div class="card-header px-0 pb-2">
-                        <h2 class="text-uppercase text-center">Danh sách tài khoản</h2>
-                        <a href="user-add.html" class="btn btn-sm btn-primary">Thêm mới</a>
+                        <h2 class="text-uppercase text-center">Danh sách video</h2>
+                        <a th:href="@{video/add}" class="btn btn-sm btn-primary">Thêm mới</a>
                     </div>
                     <div class="card-block table-border-style">
                         <div class="table-responsive">
@@ -31,18 +31,32 @@
                                 <thead>
                                 <tr>
                                     <th>STT</th>
-                                    <th>Họ Tên</th>
-                                    <th>Email</th>
-                                    <th>Số ĐT</th>
-                                    <th>#</th>
+                                    <th>Tiêu Đề</th>
+                                    <th>Hình Đại Diện</th>
+                                    <th>Thời Lượng</th>
+                                    <th>Hành Động</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <th>1</th>
-                                    <td>Nguyễn Văn Tèo</td>
-                                    <td>teonguyen@gmail.com</td>
-                                    <td>01234567899</td>
+                                    <td>Giới thiệu tổng quan</td>
+                                    <td>
+                                        <img th:src="@{/static/images/1.png}" height="50" class="p-1 border" />
+                                    </td>
+                                    <td>12 phút</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-info btn-round py-1 font-weight-bold">Sửa</a>
+                                        <a href="#" class="btn btn-sm btn-danger btn-round py-1 font-weight-bold">Xóa</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Javascript căn bản</td>
+                                    <td>
+                                        <img th:src="@{/static/images/1.png}" height="50" class="p-1 border" />
+                                    </td>
+                                    <td>18 phút</td>
                                     <td>
                                         <a href="#" class="btn btn-sm btn-info btn-round py-1 font-weight-bold">Sửa</a>
                                         <a href="#" class="btn btn-sm btn-danger btn-round py-1 font-weight-bold">Xóa</a>
